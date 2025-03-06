@@ -3,78 +3,165 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Admin Login</title>
+    <title>Admin Panel - Library Management</title>
+    <link rel="stylesheet" href="home.css">
+    <script>
+        // Restrict access if not logged in
+        if (localStorage.getItem("isAuthenticated") !== "true") {
+            alert("Unauthorized access! Please log in first.");
+            window.location.href = "login.html"; // Redirect back to login
+        }
+
+        async function fetchRequests() {
+            try {
+                const response = await fetch('/fetch-requests'); // Call API to get book requests
+                const data = await response.json();
+
+                const requestContainer = document.getElementById('request-container');
+                requestContainer.innerHTML = ""; // Clear existing data
+
+                if (data.length === 0) {
+                    requestContainer.innerHTML = "<p>No book requests found.</p>";
+                    return;
+                }
+
+                data.forEach(request => {
+                    const card = document.createElement('div');
+                    card.className = 'request-card';
+                    card.innerHTML = `
+                        <h3>${request.Book_name}</h3>
+                        <p><strong>Student Name:</strong> ${request.Student_name}</p>
+                        <p><strong>Student ID:</strong> ${request.Student_id}</p>
+                        <p><strong>Semester:</strong> ${request.Sem}</p>
+                        <p><strong>Request Date:</strong> ${new Date(request.Issue_date).toDateString()}</p>
+                        <div class="button-container">
+                            <button class="accept-btn" onclick="handleAction('${request._id}', 'accept')">Accept</button>
+                            <button class="decline-btn" onclick="handleAction('${request._id}', 'decline')">Decline</button>
+                        </div>
+                    `;
+                    requestContainer.appendChild(card);
+                });
+
+            } catch (error) {
+                console.error("Error fetching requests:", error);
+            }
+        }
+
+        async function handleAction(requestId, action) {
+            try {
+                const response = await fetch(`/handle-request/${requestId}/${action}`, { method: 'POST' });
+                const result = await response.json();
+                alert(result.message);
+                fetchRequests(); // Refresh request list after action
+            } catch (error) {
+                console.error("Error handling request:", error);
+            }
+        }
+
+        function logout() {
+            localStorage.removeItem("isAuthenticated"); // Clear authentication flag
+            window.location.href = "login.html"; // Redirect to login page
+        }
+
+        window.onload = fetchRequests; // Fetch requests automatically on page load
+    </script>
     <style>
         body {
             font-family: Arial, sans-serif;
             background-color: #f4f4f4;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            margin: 0;
-        }
-        .login-container {
-            background: #fff;
-            padding: 25px;
-            border-radius: 10px;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-            width: 320px;
             text-align: center;
+            margin: 0;
+            padding: 0;
         }
-        h2 {
-            margin-bottom: 15px;
+        header {
+            background-color: #007BFF;
+            color: white;
+            padding: 15px;
             font-size: 22px;
             font-weight: bold;
         }
-        .input-group {
-            margin-bottom: 18px;
+        .container {
+            margin: 20px auto;
+            width: 80%;
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+        }
+        .request-card {
+            background: #ffffff;
+            padding: 15px;
+            margin-bottom: 15px;
+            border-radius: 10px;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
             text-align: left;
+            position: relative;
         }
-        .input-group label {
-            display: block;
-            font-weight: bold;
+        .request-card h3 {
+            margin: 0;
+            color: #007BFF;
+        }
+        .request-card p {
+            margin: 5px 0;
             font-size: 14px;
-            margin-bottom: 5px;
+            color: #333;
         }
-        .input-group input {
-            width: 90%;
-            padding: 10px;
-            border: 1px solid #ccc;
-            border-radius: 6px;
+        .button-container {
+            position: absolute;
+            bottom: 10px;
+            right: 10px;
+        }
+        .accept-btn, .decline-btn {
+            padding: 8px 12px;
+            border: none;
+            border-radius: 5px;
             font-size: 14px;
+            cursor: pointer;
+            margin: 5px;
         }
-        .login-btn {
-            background: #007BFF;
+        .accept-btn {
+            background-color: #28a745;
+            color: white;
+        }
+        .accept-btn:hover {
+            background-color: #218838;
+        }
+        .decline-btn {
+            background-color: #dc3545;
+            color: white;
+        }
+        .decline-btn:hover {
+            background-color: #b02a37;
+        }
+        .logout-btn {
+            background: #dc3545;
             color: white;
             border: none;
-            padding: 12px;
-            width: 94%;
-            border-radius: 6px;
+            padding: 10px 15px;
+            border-radius: 5px;
             cursor: pointer;
+            margin-top: 15px;
             font-size: 16px;
-            font-weight: bold;
-            transition: background 0.3s ease;
         }
-        .login-btn:hover {
-            background: #0056b3;
+        .logout-btn:hover {
+            background: #b02a37;
         }
     </style>
 </head>
 <body>
-    <div class="login-container">
-        <h2>Admin Login</h2>
-        <form>
-            <div class="input-group">
-                <label for="username">Username</label>
-                <input type="text" id="username" name="username" required>
-            </div>
-            <div class="input-group">
-                <label for="password">Password</label>
-                <input type="password" id="password" name="password" required>
-            </div>
-            <button type="submit" class="login-btn">Login</button>
-        </form>
+    <header>Admin Panel - CE Department Library</header>
+
+    <div class="container">
+        <h2>Book Requests</h2>
+        <div id="request-container">
+            <!-- Requests will be loaded dynamically as cards -->
+        </div>
+
+        <button class="logout-btn" onclick="logout()">Logout</button>
     </div>
+
+    <footer>
+        <p>Contact us: library@example.com | +123 456 7890</p>
+    </footer>
 </body>
 </html>
