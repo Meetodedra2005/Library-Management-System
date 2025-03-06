@@ -1,0 +1,943 @@
+[
+  {
+    "Name": "Fundamental Of Algoritmics",
+    "Authors": "Gilles Brassard , Paul Bratley",
+    "ISBN": "978-81-203-1131-2",
+    "Description": "Writen by two eminent academics and culled from years of rich experience this book provides a systematic study and design of algorithms suitable for introductory level courses. Giving numerous worked out examples and detailed proofs, the text presents algorithms by types rather than applications. Table of Contents Preface. Preliminaries. Elementary Algorithmics. Asymptotic Notation. Analysis of Algorithms. Some Data Structures. Greedy Algorithms. Divide-and-Conquer. Dynamic Programming. Exploring Graphs. Probabilistic Algorithms. Parallel Algorithms. Computational Complexity. Heuristic and Approximate Algorithms. References. Index.",
+    "Link":"Library-book/1.png"
+  },
+  {
+    "Name": "Principles of Compiler Design",
+    "Authors": " Alfred V. Aho , Jeffrey D. Ullman",
+    "ISBN": "81-85015-61-9",
+    "Description": "Principles of Compiler Design, by Alfred Aho and Jeffrey Ullman, is a classic textbook on compilers for computer programming languages. Both of the authors won the 2020 Turing award for their work on compilers.It is often called the \"green dragon book\"[1] and its cover depicts a knight and a dragon in battle; the dragon is green, and labeled \"Complexity of Compiler Design\", while the knight wields a lance and a shield labeled \"LALR parser generator\" and \"Syntax Directed Translation\" respectively, and rides a horse labeled \"Data Flow Analysis\". The book may be called the \"green dragon book\" to distinguish it from its successor, Aho, Sethi & Ullman's Compilers: Principles, Techniques, and Tools, which is the \"red dragon book\".",
+    "Link":"Library-book/2.png"
+  },
+  {
+    "Name": "Distributed System",
+    "Authors": "Andrew S. Tanenbaun , Maarten Van Steen",
+    "ISBN": "81-317-189-8",
+    "Description": "This is the fourth edition of “Distributed Systems. We have stayed close to the setup of the third edition, including examples of (part of) existing distributed systems close to where general principles are discussed. For example, we have included material on blockchain systems, and discuss their various components throughout the book. We have, again, used special boxed sections for material that can be skipped at first reading.",
+    "Link":"Library-book/3.png"
+  },
+  {
+    "Name": "Fundamental Of Computer Algorithms",
+    "Authors": "Ellis Horowitz , Sattaj Sahani , Sanguthevar Rajasekaran",
+    "ISBN": "81-7515-257-5",
+    "Description": "This book is appropriate as a core text for upper-and graduate-level courses in algorithms. The second edition of Fundamentals of Computer Algorithms emphasizes: Design techniques: Divide and conquer, the greedy method, dynamic programming, backtracking and branch and bound are illustrated with several examples.",
+    "Link":"Library-book/4.png"
+  },
+  {
+    "Name": "Opearating System Principles",
+    "Authors": "Abraham Silberschatz, Peter Baergalvin, Greg Gagne",
+    "ISBN": 9789812531766,
+    "Description": "The seventh edition has been updated to offer coverage of the most current topics and applications, improved conceptual coverage and additional content to bridge the gap between concepts and actual implementations. The new two-color design allows for easier navigation and motivation. New exercises, lab projects and review questions help to further reinforce important concepts.· Overview· Process Management· Process Coordination· Memory Management· Storage Management· Distributed Systems· Protection and Security· Special-Purpose Systems",
+    "Link":"Library-book/5.png"
+  },
+  {
+    "Name": "HTML , DHTML , JAVASCRIPT, PERL CGI",
+    "Authors": "Ivan Bayross",
+    "ISBN": "81-8333-008-8",
+    "Description": "Title Web Enabled Commercial Applications Development Using ...: HTML, DHTML, JavaScript, Perl CGI Author Ivan Bayross Edition",
+    "Link":"Library-book/6.png"
+  },
+  {
+    "Name": "Fundamentals of Computers and Pogramming",
+    "Authors": "Devesh Jinwala, Bankim Patel",
+    "ISBN": "81-88894-00-1",
+    "Description": "Java is hot -- and Teach Yourself Java makes it easy to master Java and create real-world applications and applets in no time. Written by Java expert Joseph O'Neil and edited by Teach Yourself series editor Herb Schildt, this book provides a proven methodology designed to help you build skills immediately.",
+    "Link":"Library-book/images_not_avail.png"
+  },
+  {
+    "Name": "Teach Yourself Java",
+    "Authors": "Joseph O'Neil , Herb Schildt",
+    "ISBN": "0-07-463789-4",
+    "Description": "Telecommunications and the Computer by James Martin is a book that explores the use of telecommunication links for the transmission of computer data. The book is a reference work on telecommunications that covers the revolutionary changes in data communications technology",
+    "Link":"Library-book/8.png"
+  
+  },
+  {
+    "Name": "Telecommunication and The Computer",
+    "Authors": "James Martin",
+    "ISBN": "81-203-0771-2",
+    "Description": "-",
+    "Link":"Library-book/9.png"
+  },
+  {
+    "Name": "An Introduction To Database Systems",
+    "Authors": "C.J.Date",
+    "ISBN": "981-4053-96-1",
+    "Description": "The Seventh Edition continues to focus on the hallmark feature of its previous editions: providing a solid grounding in the foundations of database technology and shedding some light on how the field is likely to develop in the future. This comprehensive introduction to databases has been thoroughly revised to reflect the latest developments and advances in the field of database systems. Emphasizing insight and understanding rather than formalism, Chris Date has divided the book into six parts: Basic Concepts, The Relational Model, Database Design, Transaction Management, Further Topics, and Object and Object/Relational Databases.",
+    "Link":"Library-book/10.png"
+  },
+  {
+    "Name": "Agriculture, Food Security, Poverty, And Environment",
+    "Authors": "C.H. Hanumantha Rao",
+    "ISBN": "978-0-19-568396-7 / 0-19-568396-X",
+    "Description": "The books spells out a reform agenda for agriculture, food security, poverty alleviation and management of natural resources. The author argues that economic reforms need to take due account of initial conditions, viz., socio-econoomic inequalities, insufficient infrastructure and inadequate social development as well as the compulsions of a democratic polity.",
+    "Link":"Library-book/11.png"
+  },
+  {
+    "Name": "Data Structures Using C And C++",
+    "Authors": "Yedidyah Langsam, Moshe J. Augenstein, Aaron M. Tenenbaun",
+    "ISBN": "81-203-1177-9",
+    "Description": "This introduction to the fundamentals of data structures explores abstract concepts, considers how those concepts are useful in problem solving, explains how the abstractions can be made concrete by using a programming language, and shows how to use the C language for advanced programming and how to develop the advanced features of C++. It features a wealth of tested and debugged working programs in C and C++.",
+    "Link":"Library-book/12.png"
+  },
+  {
+    "Name": "The Data WareHouse LifeCycle Toolkit",
+    "Authors": "Ralph Kimball, Laura Reeves, Margy Ross, Warren Thornthwaite",
+    "ISBN": "81-265-0899-X / 978-81-265-0899-0",
+    "Description": "A comprehensive, thoughtful, and detailed book that will be of inestimable value to anyone struggling with the complex details of designing, building, and maintaining an enterprise-wide decision support system. Highly recommended.",
+    "Link":"Library-book/13.png"
+  },
+  {
+    "Name": "Information System Analyis Desigen And Implementation",
+    "Authors": "K. M Hussain , Donna Hussain",
+    "ISBN": "0-07-462158-0",
+    "Link":"Library-book/images_not_avail.png"
+  },
+  {
+    "Name": "Software Engineering ",
+    "Authors": "Roger S. Pressman",
+    "ISBN": "007-124083-7",
+    "Description": "For almost three decades Roger pressman's software engineering: a Practitioner's approach has been the world's leading textbook in software engineering. The new edition represents a major restructuring and update of previous editions, solidifying the book's position as the most comprehensive guide to this important subject. The Chapter structure will return to a more linear presentation of software engineering topics with a direct emphasis on the major activities that are part of a generic software process. Content will focus on widely used software engineering methods and will de-emphasize or completely eliminate discussion of Secondary methods tools and techniques.",
+    "Link":"Library-book/15.png"
+  },
+  {
+    "Name": "Pogramming in ANSI C",
+    "Authors": "E Balagurusamy",
+    "ISBN": "0-07-053477-2",
+    "Description": "The book ?Programming in ANSI C? has been developed specifically to meet the needs of a first-time learner who is keen to be a programmer. Distinguished as one of the bestsellers in the market, the book is taking forward another step in pursuit of perfection with this new edition. It follows a hierarchical approach by explaining the concepts from elementary to advanced level. The exhaustive coverage of critical concepts, such as Arrays, Strings, Functions, Pointers, Self-referential Structures, Dynamic Memory Allocation, etc. makes this title a complete reference guide for the beginners as well as life-long learners.",
+    "Link":"Library-book/16.png"
+  },
+  {
+    "Name": "Introduction to Artificial Intelligence",
+    "Authors": "Eugene Charniak , Drew McDermott",
+    "ISBN": "978-81-317-0306-9",
+    "Description": "Great introduction to AI with less jargon and advanced maths symbols and more good clear explanations of the various techniques used in AI. Gives a good grounding in how to implement the various algorithms and data structures of some of the famous AI programs. This book is about classic AI.",
+    "Link":"Library-book/17.png"
+  },
+  {
+    "Name": "Enterprise Resource Planning",
+    "Authors": "Vinod Kumar Garge, N.K Venkitakrishnan",
+    "ISBN": "81-203-1436-0",
+    "Link":"Library-book/images_not_avail.png"
+  },
+  {
+    "Name": "Pogramming in Basic C",
+    "Authors": "E. Balagurusamy",
+    "ISBN": "0-07-460055-9",
+    "Description": "-",
+    "Link":"Library-book/19.png"
+  },
+  {
+    "Name": "Analysis & Design of Information Systems",
+    "Authors": "James A. Senn",
+    "ISBN": "0-07-100606-0",
+    "Description": "-",
+    "Link":"Library-book/20.png"
+  },
+  {
+    "Name": "Data & Computer Communications",
+    "Authors": "William Stallings",
+    "ISBN": "81-203-2355-6",
+    "Description": "-",
+    "Link":"Library-book/21.png"
+  },
+  {
+    "Name": "Business Process Management",
+    "Authors": "Roger T. Burlton",
+    "ISBN": "81-7636-542-9",
+    "Description": "-",
+    "Link":"Library-book/22.png"
+  },
+  {
+    "Name": "Advance Concepts in Operating Systems",
+    "Authors": "Mukesh Singhal, Niranjan G. Shivaratri",
+    "ISBN": "0-07-047268-8",
+    "Description": "-",
+    "Link":"Library-book/23.png"
+  },
+  {
+    "Name": "Digital Image Processing",
+    "Authors": "Rafael C. Gonzalez, Richard E. Woods",
+    "ISBN": "978-81-203-2758-0",
+    "Description": "-",
+    "Link":"Library-book/24.png"
+  },
+  {
+    "Name": "The Spirit Of 'C'",
+    "Authors": "Mullish Cooper",
+    "ISBN": "81-7224-040-6",
+    "Description": "-",
+    "Link":"Library-book/25.png"
+  },
+  {
+    "Name": "Data & Computer Communications",
+    "Authors": "William Stallings",
+    "ISBN": "81-203-1240-6",
+    "Description": "-",
+    "Link":"Library-book/26.png"
+  },
+  {
+    "Name": "Computer System Architecture",
+    "Authors": "M. Morris Mano",
+    "ISBN": "81-203-0855-7",
+    "Description": "-",
+    "Link":"Library-book/27.png"
+  },
+  {
+    "Name": "Digital Computer Fundamentals",
+    "Authors": "Thomas C. Bartee",
+    "ISBN": "0-07-Y66184-7",
+    "Description": "-",
+    "Link":"Library-book/28.png"
+  },
+  {
+    "Name": "Structure Cobol Programming",
+    "Authors": "Nancy Stern, Robert A. Stern",
+    "ISBN": "9971-51-246-7",
+    "Description": "-",
+    "Link":"Library-book/29.png"
+  },
+  {
+    "Name": "UNIX Network Programming",
+    "Authors": "W. Richard Stevens ",
+    "ISBN": "81-203-2062-X",
+    "Description": "-",
+    "Link":"Library-book/30.png"
+  },
+  {
+    "Name": "Software Engineering ",
+    "Authors": "Roger S. Pressman",
+    "ISBN": "0-07-118458-9",
+    "Description": "-",
+    "Link":"Library-book/31.png"
+
+  },
+  {
+    "Name": "Artifical Engineering ",
+    "Authors": "Elaine Rich, Kevin Knight",
+    "ISBN": "0-07-460081-8",
+    "Description": "-",
+    "Link":"Library-book/32.png"
+  },
+  {
+    "Name": "Computer Programming & Utilization",
+    "Authors": "Dr. S. M. Shah, Dr P. P. Kotak",
+    "ISBN": "978-93-84955-14-4",
+    "Description": "-",
+    "Link":"Library-book/images_not_avail.png"
+
+  },
+  {
+    "Name": "Software Engineering ",
+    "Authors": "Roger S. Pressman",
+    "ISBN": "0-07-114603-2",
+    "Description": "For almost three decades, Roger Pressman's Software Engineering: A Practitioner's Approach has been the world's leading textbook in software engineering. The new seventh edition represents a major restructuring and update of previous editions, solidifying the book's position as the most comprehensive guide to this important subject. The seventh edition of Software Engineering: A Practitioner's Approach has been designed to consolidate and restructure the content introduced over the past two editions of the book. The chapter structure will return to a more linear presentation of software engineering topics with a direct emphasis on the major activities that are part of a generic software process.",
+    "Link":"Library-book/34.jpg"
+  },
+  {
+    "Name": "Microprocessors & Interfacing ",
+    "Authors": "Douglas V Hall",
+    "ISBN": "0-07-060167-4",
+    "Description": "-",
+    "Link":"Library-book/35.jpg"
+  },
+  {
+    "Name": "Database System Concepts",
+    "Authors": "Abraham Silberschatz, Henry F. Korth, S. Sudarshan",
+    "ISBN": "0-070120413-X",
+    "Description": "-",
+    "Link":"Library-book/36.jpg"
+  },
+  {
+    "Name": "Probability, Random Variables and Stochastic Processes",
+    "Authors": "Athanasios Papoulis, S. Unnikrishna Pillai",
+    "ISBN": "978-0-07-048658-4, 0-07-048658-1",
+    "Description": "-",
+    "Link":"Library-book/37.jpg"
+  },
+  {
+    "Name": "Computer Networks",
+    "Authors": "Andrew S. Tanenbaum",
+    "ISBN": "81-203-2175-8",
+    "Description": "-",
+    "Link":"Library-book/38.jpg"
+  },
+  {
+    "Name": "Computer Networks",
+    "Authors": "James F. Kurose, Keith W. Ross",
+    "ISBN": "978-81-7758-878-1",
+    "Description": "-",
+    "Link":"Library-book/39.jpg"
+  },
+  {
+    "Name": "Sql, Pl/sql",
+    "Authors": "Ivan Bayross",
+    "ISBN": "81-7656-964-X",
+    "Description": "Reading books is a kind of enjoyment. Reading books is a good habit. We bring you a different kinds of books. You can carry this book where ever you want. It is easy to carry. It can be an ideal gift to yourself and to your loved ones. Care instruction keep away from fire.",
+    "Link":"Library-book/40.jpg"
+  },
+  {
+    "Name": "Fundamentals of Software Engineering",
+    "Authors": "Rajib Mall",
+    "ISBN": "978-81-203-2445-9",
+    "Description": "-",
+    "Link":"Library-book/41.jpg"
+  },
+  {
+    "Name": "Computer Architecture and Parallel processing",
+    "Authors": "Kai Hwang, Faye A. Briggs",
+    "ISBN": "0-07-066354-8",
+    "Description": "Please Read Brand New, International Softcover Edition, Printed in black and white pages, minor self wear on the cover or pages, Sale restriction may be printed on the book, but Book name, contents, and author are exactly same as Hardcover Edition. Fast delivery through DHL/FedEx express.",
+    "Link":"Library-book/42.jpg"
+  },
+  {
+    "Name": "Cracking The Coding Interview",
+    "Authors": "Gayle Laakmann McDowell",
+    "ISBN": "978-0-9847828-0-2",
+    "Description": "Behavioral PreparationAlthough most of a software engineering interview will be technical, behavioral questions matter too. This section covers how to prepare for behavioral questions and how to give strong, structured responses.",
+    "Link":"Library-book/43.jpg"
+  },  
+  {
+    "Name": "Object Oriented Programming Using C++",
+    "Authors": "Harish G. Narula",
+    "ISBN": "978-93-5077-854-8",
+    "Description": "-",
+    "Link":"Library-book/44.jpg"
+  },
+  {
+    "Name": "An Introduction To Data Structure with Applications",
+    "Authors": "Jean Paul Tremblay, Paul G. Sorenson",
+    "ISBN": "0-07-462471-7",
+    "Description": "-",
+    "Link":"Library-book/45.jpg"
+  },
+  {
+    "Name": "Programming Languages",
+    "Authors": "Terrence W. Pratt, Marvin V. Zelkowitz",
+    "ISBN": "81-203-1038-1",
+    "Description": "-",
+    "Link":"Library-book/46.jpg"
+  },
+  {
+    "Name": "Formal Languages And Automata Theory",
+    "Authors": "K. V. N. Sunitha , N. Kalyani",
+    "ISBN": "978-0-07-070205-9, 0-07-070205-5",
+    "Description": "Intended for the students of computer science, information technology and mathematics, this book offers a concise and coherent explanation of the important concepts of Automata Theory. It emphasizes on formal languages, models of computation, computability, complexity theory and also provides the conceptual tools that practitioners use in computer engineering. Table Of Contents: 1. Mathematical Preliminaries and Formal Languages 2. Finite Automata 3. Regular Languages and Regular Grammars 4. Context Free Grammars and Context Free Languages 5. Pushdown Automata 6. Turing Machines 7. Undecidability and Computability 8. NP-Completeness 9. LR(K) and LL(I) Grammar",
+    "Link":"Library-book/47.jpg"
+  },
+  {
+    "Name": "Theory Of Computation",
+    "Authors": "T. Nagamallika, D. Sudheer Kumar Reddy",
+    "ISBN": "978-93-5006-766-6",
+    "Description": "-",
+    "Link":"Library-book/images_not_avail.png"
+  },
+  {
+    "Name": "Computer Graphics ",
+    "Authors": "Sanjesh S. Pawale",
+    "ISBN": "978-81-8492-629-3",
+    "Description": "-",
+    "Link":"Library-book/images_not_avail.png"
+    
+  },
+  {
+    "Name": "Cryptography And Network Security",
+    "Authors": "William Stallings",
+    "ISBN": "978-81-7758-774-6",
+    "Description": "-",
+    "Link":"Library-book/50.jpg"
+  },
+  {
+    "Name": "English for Engineers",
+    "Authors": "S. K. Padmanabhan, B. P. Jindal, A. K. Singhal, D. N. Chatterjee",
+    "ISBN": "81-239-0011-2",
+    "Description": "-",
+    "Link":"Library-book/images_not_avail.png"
+  },
+  {
+    "Name": "Cryptography And Network Security",
+    "Authors": "William Stallings",
+    "ISBN": "81-7808-902-5",
+    "Description": "-",
+    "Link":"Library-book/52.jpg"
+  },
+  {
+    "Name": "Data Communication and Networking ",
+    "Authors": "Behrouz A. Forouzan",
+    "ISBN": "978-0-07-063414-5, 0-07-063414-9",
+    "Description": "-",
+    "Link":"Library-book/53.jpg"
+  },
+  {
+    "Name": "Signals & Systems",
+    "Authors": "Alan V. Oppenheim, Alan S. Willsky, S. Hamid Nawab",
+    "ISBN": "978-81-203-1246-3",
+    "Description": "-",
+    "Link":"Library-book/54.jpg"
+  },
+  {
+    "Name": "Entrepreneurship",
+    "Authors": "Robert D. Hisrich, Michael P. Peters, Dean A. Shepherd",
+    "ISBN": "0-07-062017-2",
+    "Description": "-",
+    "Link":"Library-book/55.jpg"
+  },
+  {
+    "Name": "Some Essays On Post-Modernism Globalization and the Media",
+    "Authors": "A. F. Mathew",
+    "ISBN": "-",
+    "Description": "-",
+    "Link":"Library-book/images_not_avail.png"
+  },
+  {
+    "Name": "Introduction To Computer Theory",
+    "Authors": "Daniel I. A. Cohen",
+    "ISBN": "9971-51-220-3",
+    "Description": "This text strikes a good balance between rigor and an intuitive approach to computer theory. Covers all the topics needed by computer scientists with a sometimes humorous approach that reviewers found \"refreshing.\" It is easy to read and the coverage of mathematics is fairly simple so readers do not have to worry about proving theorems.",
+    "Link":"Library-book/57.jpg"
+  },
+  {
+    "Name": "Introduction to Automata Theory, Languages, and Computation",
+    "Authors": "John E. Hopcroft, Rajeev Motwani, Jeffrey D. Ullman",
+    "ISBN": "81-7808-347-7",
+    "Description": "-",
+    "Link":"Library-book/images_not_avail.png"
+  },
+  {
+    "Name": "Handbook of Practical Communication Skills",
+    "Authors": "Chrissie Wright",
+    "ISBN": "81-7224-777-X",
+    "Description": "-",
+    "Link":"Library-book/59.jpg"
+  },
+  {
+    "Name": "Essentials Of Management",
+    "Authors": "Harold Koontz, Heinz Weihrich",
+    "ISBN": "0-07-100776-8",
+    "Description": "Designed to be read in conjunction with principles of management courses, the authors aim to provide an understanding of basic management theory and policy. The text covers such subjects as patterns of management analysis, performance control, preventative control and staffing selection.",
+    "Link":"Library-book/60.jpg"
+  },
+  {
+    "Name": "System Analysis and Design Methods",
+    "Authors": "Jeffrey L. Whitten , Lonnie D. Bentley",
+    "ISBN": "0-07463962-5",
+    "Description": "-",
+    "Link":"Library-book/61.jpg"
+  },
+  {
+    "Name": "Karnataka IT Directory 2002-03",
+    "Authors": "City Info Services Pvt.Ltd",
+    "ISBN": "-",
+    "Description": "-",
+    "Link":"Library-book/images_not_avail.png"
+  },
+  {
+    "Name": "The Complete Reference Java",
+    "Authors": "Herbert Schildt",
+    "ISBN": "0-07063677-X",
+    "Description": "-",
+    "Link":"Library-book/63.jpg"
+  },
+  {
+    "Name": "Data Mining Concepts and Techniques",
+    "Authors": "Jiawei Han , Micheline Kamber , Jian Pei",
+    "ISBN": "978-93-80931-91-3",
+    "Description": "-",
+    "Link":"Library-book/64.jpg"
+  },
+  {
+    "Name": "WebMaster",
+    "Authors": "Lakhotia Computer Center",
+    "ISBN": "-",
+    "Description": "-",
+    "Link":"Library-book/images_not_avail.png"
+  },
+  {
+    "Name": "Children's University Introductory HandBook",
+    "Authors": "Commissionerate of Higher Eduction Goverment Of Gujarat",
+    "ISBN": "-",
+    "Description": "-",
+    "Link":"Library-book/images_not_avail.png"
+  },
+  {
+    "Name": "Artifical Intelligence",
+    "Authors": "Patrick Henry Winston",
+    "ISBN": "978-81-317-1505-5",
+    "Description": "Description This book explains howit is possible for computers to reason and perceive, thusintroducing the field called artificial intelligence. This bookwould appeal to programmers, professionals and students. Thiscompletely rewritten and updated edition reflects the revolutionaryprogress made since the previous edition was published. For Sale in Indiansubcontinent only Semiformal representation and procedure specifications bring the ideas to within a step or two implementation and highlight unifying themes. Application examples provide a glimpse of the ideas at work in real-world systems. Powerful ideas and principles are identified ad emphasized. Acknowledgements Software Preface Representations and Methods The Intelligent Computer Semantic Nets and Description Matching Generate and Test, Means-Ends Analysis, and Problem Reduction Nets and Basic Search Nets and Optimal Search Trees and Adversarial Search Rules and Rule Chaining Rules, Substrates, and Cognitive Modeling Frames and Inheritance Fames and Commonsense Numeric Constraints and Propagation Symbolic Constraints and Propagation Logic and Resolution Proof Backtracking and Truth Maintenance Planning Learning and Regularity Recognition Learning by Analyzing Difference Learning by Explaining Experience Learning by Correcting Mistakes Learning by Recording Cases Learning by Managing Multiple Models Learning by Building Identification Trees Learning by Training Neural Nets Learning by Training Perceptions Learning by Training Approximation Nets Learning by Simulating Evolution Recognizing Objects Describing Images Expressing Language Constrains Responding to Questions and Commands Appendices Relational Databases Exercises Bibliography Index Colophon Patrick Henry Winston is Director of the ArtificialIntelligence Laboratory at the Massachusetts Institute ofTechnology, and a past resident of the American Association forArtificial Intelligence. ",
+    "Link":"Library-book/67.jpg" 
+    },
+  {
+    "Name": "Software Metrics",
+    "Authors": "Norman E. Fenton,  Shari Lawrence Pfleeger",
+    "ISBN": "981-240-385-X",
+    "Description": "PART I: FUNDAMENTALS OF MEASUREMENT AND EXPERIMENTATION 1. Measurement: What Is It and Why Do It? 2. The Basics of Measurement 3. A Goal-Based Framework for Software Measurement 4. Empirical Investigation 5. Software Metrics Data Collection 6. Analyzing Software-Measurement Data PART II: SOFTWARE-ENGINEERING MEASUREMENT 7. Measuring Internal Product Attributes: Size 8. Measuring Internal Product Attributes: Structure 9. Measuring Internal Product Attributes 10. Software Reliability: Measurement and Prediction 11. Resource Measurement: Productivity, Teams, and Tools 12. Making Process Predictions PART III: MEASUREMENT AND MANAGEMENT 13. Planning a Measurement Program 14. Measurement in Practice 15. Empirical Research in Software Engineering APPENDIXES: A. Solutions to Selected Exercises / B. Metric Tools / C. Acronyms and Glossary / ANNOTATED BIBLIOGRAPHY / INDEX",
+    "Link":"Library-book/68.jpeg"
+  },
+  {
+    "Name": "Data Communication And Distrubuted Networks",
+    "Authors": "Uyless D. Black",
+    "ISBN": "81-203-0925-1",
+    "Description": "This practical, detailed tutorial examines the relationships of data communications and distributed networks_with emphasis on distributed communications protocols, distributed data bases and client-server relationships. Table of Contents Preface. Introduction. Overview of a Data Communications Network. Data Communications Systems Operations. Major Components in a Data Communications Systems. Software and Data Bases. Transmission Impairments. Data Link Controls/Line Protocols. Digital Transmission. Distributed Network Architectures Remote Procedure Calls. Local Area Networks. Managing Distributed Systems. Design Considerations. Index.",
+    "Link":"Library-book/69.jpg"
+  },
+  {
+    "Name": "Professional ASP .NET 2.0",
+    "Authors": "Bill Evjen, Scott Hanselman, Farhan Muhammad, Srinivasa Sivakumar, Devin Rader",
+    "ISBN": "81-265-0669-5",
+    "Description": "All new, for ASP.NET 2.0, this bestselling book provides experienced developers with real–world examples of the powerful new time–saving, code–saving features in this new version. Seasoned author and International .NET Association founder Bill Evjen along with Scott Hanselman help developers make a smooth transition to this new version of ASP.NET with their clear explanations of even the most dramatic changes.Helpful examples in both VB and C# clearly show how to build ASP.NET 2.0 applications.",
+    "Link":"Library-book/70.jpg"
+  },
+  {
+    "Name": "Discrete Mathematical Structures with Applications to Computer Science",
+    "Authors": "J. P. Tremblay, R. Manohar",
+    "ISBN": "0-07-463113-6",
+    "Description": "The trend is to select several topics in mathematics that are essential to the study of many computer science areas and to expose the students to the mathematical Prerequisites in some other way. A similar development has oaaured in most engineering curricula. The selection of the topics was governed by our desire to introduce most of the basic terminology used in as many advanced courses in computer science as possible. In order to motivate the students properly, we feel that it is important to consider certain applic",
+    "Link":"Library-book/71.jpg"
+  },
+  {
+    "Name": "Software Project Management",
+    "Authors": "Subramanian Chandramouli, Saikat Dutt",
+    "ISBN": "978-93-325-4214-3",
+    "Description": " Software Project Management is a comprehensive textbook designed for the students of Computer Science and Information Technology. All the topics are explained with a large number of practical examples and case studies.",
+    "Link":"Library-book/72.jpg"
+  },
+  {
+    "Name": "Data Communication And Networking",
+    "Authors": "Dr. M. Jain, Satish Jain",
+    "ISBN": "81-7656-186-X",
+    "Description": "the book covers DOEACC syllabus for A9 Paper) and describes asynchronous, synchronous data, multiplexers and data transmission modes in a very simple manner. It also deals with introduction br>o radio, vhf, microwave VSAT and satellite communication links.  Data modem, Multichannel data communication and pulse code modulation are dealt in detail. Data networks and topology  both logical and physical are described with large number of illustrations and examples for ease of understanding.  Features:  communication systems and satellite application described in easy to understand language  detailed exposition of error correction codes and hamming codeosi 7Layer model and data communication protocols effectively illustrated with examples special features of high speed Modems based on QAM principle described completely each br>Chapter contains solutions to test Paper for practice and self evaluation glossary of most frequently used terms provided for ready reference. Comprehensive index included for easy access to numerous terms needed for answering objective questions set in 'a' Level examination. Contents Part 1 Data communication and networking essentials br>Chapter 1 Data communication br>Chapter 2 transmission media br>Chapter 3 Data Modems br>Chapter 4 Multichannel data communication br>Chapter 5 Data networks br>Chapter 6Network protocols br>Chapter 7 fibre optic communications br>Chapter 8 Data communication systems  .",
+    "Link":"Library-book/73.jpg"
+  },
+  {
+    "Name": "Software Engineering",
+    "Authors": "Subramanian Chandramouli, Saikat Dutt, B.G. Geetha, Chandramouli Seetharaman",
+    "ISBN": "978-93-325-3729-3",
+    "Description": "This book addresses basic and advanced concepts in software engineering and is intended as a textbook for an undergraduate-level engineering course. In addition to covering important concepts in software engineering, this book also addresses the perspective of decreasing the overall effort of writing quality software. It covers the entire spectrum of the software engineering life cycle starting from the requirement analysis until the implementation and maintenance of the project.",
+    "Link":"Library-book/74.jpg"
+  },
+  {
+    "Name": "The A.I. Typhoon",
+    "Authors": "Vijay Mukhi",
+    "ISBN": "978-93-85509-13-1",
+    "Description": "The AI Typhoon is fast approaching and is poised to sweep the world!Artificial Intelligence is set to become the next big innovation in the world technology, with far reaching applications across industries, governments, and day to day living.",
+    "Link":"Library-book/75.jpg"
+  },
+  {
+    "Name": "Fundamentals of Speech Recognition",
+    "Authors": "Lawrence Rabiner, Biing-Hwang Juang, B. Yegnanarayana",
+    "ISBN": "978-81-7758-560-5",
+    "Description": "-",
+    "Link":"Library-book/76.jpg"
+  },
+  {
+    "Name": "Inspiring And Responsible Teacher",
+    "Authors": "Shri G. Narayana",
+    "ISBN": "-",
+    "Description": "-",
+    "Link":"Library-book/77.png"
+  },
+  {
+    "Name": "Governing Globalization",
+    "Authors": "Deepak Nayyar",
+    "ISBN": "019568692-6",
+    "Description": "This text examines in depth the governance needs of the world economy and polity. It evaluates the experience of institutions to sketch the contours of reform and change necessary in the existing system and analyses issues of emerging significance to suggest that other institutions are needed.",
+    "Link":"Library-book/78.jpg"
+  },
+  {
+    "Name": "ASP.NET 3.5",
+    "Authors": "George Shepherd",
+    "ISBN": "978-81-203-3494-6",
+    "Description": "Teach yourself the fundamentals of Web development with ASP.NET 3.5—one step at a time. With STEP BY STEP, you get the guidance and learn-by-doing examples you need to start building Web applications and Web services in the Microsoft Visual Studio 2008 environment. The author—a highly regarded programming expert, writer, and instructor—illuminates ASP.NET features through practical examples that help developers quickly grasp concepts and apply techniques to the real world. The book also includes a companion CD with code samples, data sets, and a fully searchable eBook.",
+    "Link":"Library-book/79.jpg"
+  },
+  {
+    "Name": "Programming with Assembly Language",
+    "Authors": "David E. Goldberg, Jacqueline A. Jones, Pat H. Sterbenz",
+    "ISBN": "0-07-099119-7",
+    "Description": "-",
+    "Link":"Library-book/80.jpg"
+  },
+  {
+    "Name": "Electronic Devices And Circuit Theory ",
+    "Authors": "Robert L.Boylested Louis Nashelsky",
+    "ISBN": "81-203-1176-0",
+    "Description": "-",
+    "Link":"Library-book/81.jpg"
+  },
+  {
+    "Name": "The 8051 Microcontroller Architecture, Pogramming & Applications",
+    "Authors": "Kenneth  J. Ayala",
+    "ISBN": "81-900828-4-1",
+    "Description": "-",
+    "Link":"Library-book/82.jpg"
+  },
+  {
+    "Name": "Encyclopedia of Technology Terms",
+    "Authors": "BPB Publication",
+    "ISBN": "81-7635-680-8",
+    "Description": "Whatis.com's Encyclopedia of Technology Terms belongs on the bookshelf of anyone who's ever been tripped up by a computer acronym, curious about the origins of a technology term, or looking for the definitive guide to get them through a world laced with jargon, computer acronyms, and techno-speak. Written in plain English and organized alphabetically, Whatis.com's Encyclopedia of Technology Terms gives you easy-to-understand definitions to more than 3,500 technology terms and 10,000 acronyms, covering computer hardware, software, networking, the World Wide Web and Internet, data storage, wireless telecommunications, and security. Students, writers, journalists, high-tech marketers, and computer enthusiasts alike will find Whatis.com's Encyclopedia of Technology Terms an indispensable and enjoyable companion in today's technology-driven world.",
+    "Link":"Library-book/83.jpg"
+  },
+  {
+    "Name": "The Complete Reference ASP.NET",
+    "Authors": "Matthew MacDonald",
+    "ISBN": "978-0-07-049536-4 , 0-07-049536-X",
+    "Description": "-",
+    "Link":"Library-book/84.jpg"
+  },
+  {
+    "Name": "A+ Complete",
+    "Authors": "David Groth",
+    "ISBN": "81-7656-832-5",
+    "Description": "Here's the book you need to prepare for CompTIA's A+ Exam. The most up to date content needed to pass the A+ Core exam and the latest coverage of memory, bus, peripherals, and wireless technologies for the Operating Systems exam. This Study Guide provides:",
+    "Link":"Library-book/85.jpg"
+  },
+  {
+    "Name": "ASP.NET 2.0",
+    "Authors": "Dreamtech Software Teem",
+    "ISBN": "978-81-7722-455-9",
+    "Description": "This book features immediate solutions that provide hands-on real-world techniques to solve problems without extensive tutorials. Readers will learn how to use the full potential of ASP.Net 2.0 technology to create state-of-the art Web-based enterprise solutions with the latest versions of C# and VB.Net. This comprehensive reference goes far beyond the first wave of tutorial and intermediate level books published on ASP.NET and provides unique programming tips and insight that can't be easily found in other sources. · Asp.Net 2.0 Essentials · Developing a Web Application · Applications and State · Web Forms: Standard Controls (I) · Web Forms: Standard Controls (II) · Navigation Controls: Treeview, Menu, Sitemappath and Wizards · Validation Controls, Validation Gropus, Calendars and Ad Rotators · Introducing Login Controls · Introducing Web Parts Controls · Introducing Html Controls · Working With Database · Inside Master Pages And Themes · Understanding User Profiles · Inside Web Parts Framework · Caching In Asp.Net 2.0 · Application Globalization · Asp.Net Web Services · Developing Mobile Applications · Application Tracking · Managing Web Applications · Extending Asp.Net 2.0 · Securing Web Applications · Developing Web Sites Compliant With Web Standards · Future Technologies",
+    "Link":"Library-book/86.jpg"
+  },
+  {
+    "Name": "Inforamtion System for mordern Mangement",
+    "Authors": "Robert G. Murdick , Joel E. Ross , James R. Claggett",
+    "ISBN": "81-203-0397-0",
+    "Description": "-",
+    "Link":"Library-book/87.jpeg"
+  },
+  {
+    "Name": "UNIX Network Programming",
+    "Authors": "W. Richard Stevens",
+    "ISBN": "81-7808-014-1",
+    "Description": "The only guide to UNIX network programming APIs you'll ever need! Whether you write Web servers, client/server applications, or any other network software, you need to understand networking APIS―especially sockets in greater detail than ever before. You need UNIX Network Programming, Volume 1, Second Edition.",
+    "Link":"Library-book/88.jpg"
+  },
+  {
+    "Name": "Computer Graphics",
+    "Authors": "Donald Hearn, M. Pauline Baker",
+    "ISBN": "81-203-0944-8",
+    "Description": "A complete update of a bestselling introduction to computer graphics, this volume explores current computer graphics hardware and software systems, current graphics techniques, and current graphics applications. Includes expanded coverage of algorithms, applications, 3-D modeling and rendering, and new topics such as distributed ray tracing, radiosity, physically based modeling, and visualization techniques",
+    "Link":"Library-book/89.jpg"
+  },
+  {
+    "Name": "Dot Net Technology",
+    "Authors": "Anamitra Deshmukh- Nimbalkar",
+    "ISBN": "978-93-332-1518-3",
+    "Description": "Chapter - 1 Introduction to .NET Framework Chapter - 2 The Basics & Console Applications in C# and C# .NET Chapter - 3 ADO.NET Chapter - 4 Windows Forms and Controls in Details Chapter - 5 Visual Inheritance in .NET (C#) Chapter - 6 Mastering Windows Chapter - 7 ASP.NET Chapter - 8 Themes and Master Pages Chapter - 9 Managing State Chapter - 10 Creating and Consuming Web Services Chapter - 11 Advanced Features in .NET Dot NET Technology Lab Solved GTU Question Papers",
+    "Link":"Library-book/90.jpg"
+  },
+  {
+    "Name": "Fundamentals of Computer Algorithms",
+    "Authors": "Ellis Horowitz, Sartaj Sahni, Sanguthevar Rajasekaran",
+    "ISBN": "81-7515-257-5",
+    "Description": "-",
+    "Link":"Library-book/91.jpg"
+  },
+  {
+    "Name": "Data Structures",
+    "Authors": "Seymour Lipschutz",
+    "ISBN": "0-07-049549-1",
+    "Description": "Data structures is an important part of graduate studies for students of Electronics and Communications. Data Structures with C (Schaum's Outline Series) is a vital guidebook for such students and helps understand the conceptS and theories behind data structures. The book deals with data structures in a comprehensive and exhaustive manner. Various new educational features that have been incorporated in this book help the student grasp to topics effortlessly.",
+    "Link":"Library-book/92.jpg"
+  },
+  {
+    "Name": "Introduction to Database Systems",
+    "Authors": "-",
+    "ISBN": "978-81-317-3192-5",
+    "Description": "The book deals with implementation, design and application of DBMS and complicated topics such as relational algebra and calculus and normalization are explained in a very simple manner.",
+    "Link":"Library-book/93.jpg"
+  },
+  {
+    "Name": "Database System Concepts",
+    "Authors": "Abraham Silberschatz, Henry F. Korth, S. Sudarshan",
+    "ISBN": "007-124476-X",
+    "Description": "Database System Concepts, 5/e, is intended for a first course in databases at the junior or senior undergraduate, or first-year graduate, level. In addition to basic material for a first course, the text contains advanced material that can be used for course supplements, or as introductory material for an advanced course. The authors assume only a familiarity with basic data structures, computer organization, and a high-level programming language such as Java, C, or Pascal. Concepts are presented as intuitive descriptions, and many are based on the running example of a bank enterprise. Important theoretical results are covered, but formal proofs are omitted. In place of proofs, figures and examples are used to suggest why a result is true.",
+    "Link":"Library-book/94.jpg"
+  },
+  {
+    "Name": "Management Information Systems",
+    "Authors": "W. S. Jawadekar",
+    "ISBN": "0-07-044575-3",
+    "Description": "-",
+    "Link":"Library-book/95.jpg"
+  },
+  {
+    "Name": "Computer Networks ",
+    "Authors": "Andrew S. Tanenbaum",
+    "ISBN": "81-03-1165-5",
+    "Description": "-",
+    "Link":"Library-book/images_not_avail.png"
+  },
+  {
+    "Name": "Mobile Communication",
+    "Authors": "Jochen Schiller",
+    "ISBN": "978-81-317-2426-2",
+    "Description": "-",
+    "Link":"Library-book/97.jpg"
+  },
+  {
+    "Name": "Cryptography And Network Security",
+    "Authors": "Behrouz A. Forouzan",
+    "ISBN": "978-93-392-2094-5",
+    "Description": "-",
+    "Link":"Library-book/98.jpg"
+  },
+  {
+    "Name": "Cryptography And Network Security (2nd Edition)",
+    "Authors": "Atul Kahate",
+    "ISBN": "978-0-07-064823-4",
+    "Description": "-",
+    "Link":"Library-book/99.jpg"
+  },
+  {
+    "Name": "Programming in ANSI C (2nd Edition)",
+    "Authors": "E. Balagurusamy",
+    "ISBN": "0-07-460401-5",
+    "Description": "-",
+    "Link":"Library-book/100.jpg"
+  },
+  {
+    "Name": "UGC/NET/JRF/SET Computer Science And Applications (Paper-II & III) (Revised Edition)",
+    "Authors": "Chandresh Shah, Saurab Mishra",
+    "ISBN": "978-81-7482-586-5",
+    "Description": "-",
+    "Link":"Library-book/101.jpg"
+  },
+  {
+    "Name": "Artificial Intelligence (2nd Edition)",
+    "Authors": "Elaine Rich, Kevin Knigth",
+    "ISBN": "978-0-07-460081-8",
+    "Description": "-",
+    "Link":"Library-book/102.jpg"
+  },
+  {
+    "Name": "Internetworking With TCP/IP Volume I (5th Edition)",
+    "Authors": "Douglas E. Comer",
+    "ISBN": "81-203-2998-8",
+    "Description": "-",
+    "Link":"Library-book/103.jpg"
+  },
+  {
+    "Name": "Computer Oriented Numerical Methods A Programming Approach (2nd Edition)",
+    "Authors": "R. S. Salaria",
+    "ISBN": "81-87522-07-0",
+    "Description": "-",
+    "Link":"Library-book/images_not_avail.png"
+  },
+  {
+    "Name": "Object Oriented Programming With C++ (4th Edition)",
+    "Authors": "E Balagurusamy",
+    "ISBN": "978-0-07-066907-9",
+    "Description": "-",
+    "Link":"Library-book/105.jpg"
+  },
+  {
+    "Name": "Programming in ANSI C (4th Edition)",
+    "Authors": "E Balagurusamy",
+    "ISBN": "978-0-07-064822-7",
+    "Description": "-",
+    "Link":"Library-book/106.jpg"
+  },
+  {
+    "Name": "Cryptography And Network Security (4th Edition)",
+    "Authors": "William Stallings",
+    "ISBN": "978-81-775-8774-6",
+    "Description": "-",
+    "Link":"Library-book/107.jpg"
+  },
+  {
+    "Name": "Microprocess - I (5th Revised Edition)",
+    "Authors": "V.J Vibhute, P.B. Borole",
+    "ISBN": "-",
+    "Description": "-",
+    "Link":"Library-book/108.jpg"
+  },
+  {
+    "Name": "C Examples (120 Solved Programs)",
+    "Authors": "Kaushal Patel, Kalpesh Patel, Tejas Shah",
+    "ISBN": "-",
+    "Description": "-",
+    "Link":"Library-book/images_not_avail.png"
+  },
+  {
+    "Name": "SQL, PL/SQL The Programming Language of Oracle (3rd Revised Edition)",
+    "Authors": "Ivan Bayross",
+    "ISBN": "81-7656-764-X",
+    "Description": "A must-have book to understand the languages used in Oracle, ‘the SQL, PL/SQL the Programming Language of Oracle’ is a book that has been written keeping in mind the requirements of programmers. The handy reference book digs deep into the basics and the advanced details of SQL and PL/SQL programming language. Designed to help individuals to become competent Oracle application programmer/developer, the ‘SQL, PL/SQL the Programming Language of Oracle’ features extensive examples for practice. To make the content all the more comprehendible, it has been divided into five different sections. The first section guides the readers through the process of setting up of Oracle 9.1 followed by a step-wise guide to install the same on Windows. The second section is dedicated to the study of set-up of a business model, retail banking and project planning. The next sections – three, four and five discuss Structured Query Language (SQL), Advance SQL and PL/ SQL, security and database respectively. Interestingly, the ‘SQL, PL/SQL the Programming Language of Oracle’ comes with a complimentary CD-ROM, which comprises of codes, practice exercises and answers to the questions in the book. About the Author: An Indian author, Ivan Bayross has an experience of over three decades in coding, and fixing broken codes and writing newer ones have been his passion for long. He has written various books on computer science that are being used as major textbooks in educational institutions across India.",
+    "Link":"Library-book/110.png"
+  },
+  {
+    "Name": "Programming with Java A Primer (4th Edition)",
+    "Authors": "E Balagurusamy",
+    "ISBN": "978-0-07-014169-8",
+    "Description": "-",
+    "Link":"Library-book/111.jpg"
+
+  },
+  {
+    "Name": "Classic Data Strucatures",
+    "Authors": "D. Samanta",
+    "ISBN": "978-81-203-1874-8",
+    "Description": "-",
+    "Link":"Library-book/112.jpg"
+  },
+  {
+    "Name": "Object Oriented Programming With C++ (3rd Edition)",
+    "Authors": "E Balagurusamy",
+    "ISBN": "0-07-059362-0",
+    "Description": "In a world where change is an everyday occurrence, business as usual is a guaranteed recipe for failure. Managing With a Conscience spells out a better option for improving long-term corporate and individual success: restore traditional values and inject trust and integrity into all business practices and relationships, both internal and external. With its proven management practices and values-driven approach, this book provides a blueprint for winning the loyalty of the marketplace: building open, honest communication with employees; producing on time, and within budget, top quality goods and services, and putting integrity back where it belongs, right beside the corporate bottom line.",
+    "Link":"Library-book/113.jpg"
+  },
+  {
+    "Name": "MFC Programming from the Ground Up (2nd Edition)",
+    "Authors": "Herbert Schildt",
+    "ISBN": "0-07-463992-7",
+    "Description": "-",
+    "Link":"Library-book/114.jpg"
+  },
+  {
+    "Name": "Programming with Java A Primer (4th Edition)",
+    "Authors": "E Balagurusamy",
+    "ISBN": "978-0-07-014169-8",
+    "Description": "Programming with Java, 4e, gives an excellent account of the fundamentals of Java Programming. The language concepts are aptly explained in simple and easy-to-understand style, supported with examples, illustrations and programming and debugging exercises.",
+    "Link":"Library-book/115.jpg"
+  },
+  {
+    "Name": "Unix Shell Programming",
+    "Authors": "Yashavant P. Kanetkar",
+    "ISBN": "81-7029-753-2",
+    "Description": "Reading books is a kind of enjoyment. Reading books is a good habit. We bring you a different kinds of books. You can carry this book where ever you want. It is easy to carry. It can be an ideal gift to yourself and to your loved ones. Care instruction keep away from fire.",
+    "Link":"Library-book/116.jpg"
+  },
+  {
+    "Name": "Programming Languages Design and Implementation",
+    "Authors": "Terrence W. Pratt, Marvin V. Zelkowitz",
+    "ISBN": "80-203-2035-2",
+    "Description": "For sophomore/junior-level courses in Programming Languages, Comparative Programming Languages, Language Design, and Organization of Programming Languages, in departments of Computer Science and Computer Engineering. Comprehensive in approach, this text explores the major issues in both design and implementation of modern programming languages and provides a basic introduction to the underlying theoretical models on which these languages are based. It focuses on the underlying software and hardware architecture that guides language design, helping students understand why certain decisions are more rational than others in building a program. The emphasis throughout is on fundamental concepts―students learn important ideas, not minor language differences―but several languages are highlighted in sufficient detail to enable students to write programs that demonstrate the relationship between a source program and its execution behavior, without having to purchase separate language reference manuals.",
+    "Link":"Library-book/117.jpg"
+  },
+  {
+    "Name": "Cryptography And Network Security Principles and Practice (2nd Edition)",
+    "Authors": "William Stallings",
+    "ISBN": "81-7808-605-0",
+    "Description":"-",
+    "Link":"Library-book/118.jpg"
+  },
+  {
+    "Name": "Advanced Programming in JAVA2 (Updated To J2SE6) With Swing Servlet And RMI",
+    "Authors": "K. Somasundaram",
+    "ISBN": "978-81-7992-888-2",
+    "Description": "The book starts with the basic concepts of object oriented programming and a concise introduction to Java language and Java architecture.The classes,inheritance and abstract classes are explained with the help of programs.All chapters contain complete programs with outputs.In addition real life problems are stated and complete programs are given.Important points are high lighted and all chapters contain objective type review questions.Advanced chapters such as JDBC,SwingServlet and RMI will serve as resource material for professional programmers. Key Features of the book. Clean and crisp description,Complete program for each concept,Hard to understand concepts explained thru appropriate conceptual diageams,review questions and exercises for each chapter,234 complete programs,37 programs for real life problems,187 figures and 53 tables,updated to J2SE6",
+    "Link":"Library-book/119.jpg"
+  },
+  {
+    "Name": "Teach Yourself JAVA",
+    "Authors": "Joseph O'Neil",
+    "ISBN": "0-07-463789-4",
+    "Description": "-",
+    "Link":"Library-book/120.jpg"
+  },
+  {
+    "Name": "Fundamentals of Digital Circuits",
+    "Authors": "A. Anand Kumar",
+    "ISBN": "978-81-203-1745-1",
+    "Description": "-",
+    "Link":"Library-book/121.jpg"
+  },
+  {
+    "Name": "Distribuated Operating Systems Concepts and Design",
+    "Authors": "Pradeep K. Sinha",
+    "ISBN": "81-203-1380-1",
+    "Description": "-",
+    "Link":"Library-book/122.jpg"
+  },
+  {
+    "Name": "C++ The Complete Reference (3rd Edition)",
+    "Authors": "Herbert Schildt",
+    "ISBN": "0-07-463880-7",
+    "Description": "-",
+    "Link":"Library-book/123.jpg"
+  },
+  {
+    "Name": "Operating System Principles (7th Edition)",
+    "Authors": "Abraham Silberschatz",
+    "ISBN": "9812-53-176-9",
+    "Description": "-",
+    "Link":"Library-book/124.jpg"
+  },
+  {
+    "Name": "Java/J2EE Interview Questions",
+    "Authors": "Shivprasad Koirala",
+    "ISBN": "81-8333-173-4",
+    "Description": "About The Book JAVA/ Interview Questions (With Set of 2 CDs) is an extensive material that helps in the preparation of recruitment interviews in the field of JAVA. Live JAVA interviews are used as a the source to find the questions in the book, which are presented in a simple question-answer format. Each question is further classified into Basic, Intermediate and Advanced categories. The crisp segregation and precision in answers ensures effective learning in little time. This book also covers additional concepts like UML, Project management and Architecture, Database, which certain companies expect aspiring employees to know. Important points like salary negotiations, resume making and general points to be remembered during an interview are also provided. ",
+    "Link":"Library-book/125.jpg"
+  },
+  {
+    "Name": "Advance Java Technology",
+    "Authors": "Pro. M.T Savaliya",
+    "ISBN": "978-93-5004-207-6",
+    "Description": "-",
+    "Link":"Library-book/126.jpg"
+  },
+  {
+    "Name": "Core JAVA An Integrated Approach",
+    "Authors": "R. Nageswara Rao",
+    "ISBN": "81-7722-836-6",
+    "Description": "-",
+    "Link":"Library-book/127.jpg"
+  },
+  {
+    "Name": "Object-Oriented Programming in Turbo C++",
+    "Authors": "Robert Lafore",
+    "ISBN": "81-85623-22-8",
+    "Description": "-",
+    "Link":"Library-book/128.jpg"
+  },
+  {
+    "Name": "Visual C++ Programming",
+    "Authors": "Yashavant P. kanetkar",
+    "ISBN": "81-7029-971-3",
+    "Description": "-",
+    "Link":"Library-book/129.jpg"
+  },
+  {
+    "Name": "Operating System Concepts(6th Edition)",
+    "Authors": "Abraham Silberschatz",
+    "ISBN": "978-81-265-0885-3",
+    "Description": "-",
+    "Link":"Library-book/130.jpg"
+  },
+  {
+    "Name": "Operating System Principles (7th Edition)",
+    "Authors": "Abraham Silberschatz",
+    "ISBN": "978-81-265-0962-1",
+    "Description": "-",
+    "Link":"Library-book/131.jpg"
+  },
+  {
+    "Name": "Management Information System (7th Edition)",
+    "Authors": "James A. O'Brien",
+    "ISBN": "978-0-07-062003-2",
+    "Description": "-",
+    "Link":"Library-book/132.jpg"
+  },
+  {
+    "Name": "Java for the Web with Servlets, JSP, and EJB",
+    "Authors": "Budi Kurniawan",
+    "ISBN": "81-7635-627-1",
+    "Description": "-",
+    "Link":"Library-book/133.jpg"
+  },
+  {
+    "Name": "Database Systems Using Oracle (2nd Edition)",
+    "Authors": "Nilesh Shah",
+    "ISBN": "978-81-203-3236",
+    "Description": "-",
+    "Link":"Library-book/images_not_avail.png"
+  }
+]

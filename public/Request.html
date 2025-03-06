@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Request</title>
+    <link rel="stylesheet" href="Request.css">
+</head>
+<body>
+    
+    <div class="login-container">
+        
+        <h1>ISSUE YOUR BOOK</h1>
+        <form action="/Request" method="POST" >
+            <div class="form-group">
+                <label for="studentname">Student Name</label>
+                <input type="text" id="username" name="Student_name" placeholder="Enter your name" required>
+            </div>
+            <div class="form-group">
+                <label for="id">Student Id</label>
+                <input type="text" id="id" name="Student_id" placeholder="Enter your id" required>
+            </div>
+
+            <div class="form-group">
+                <label for="sem">Semester</label>
+                <input type="text" id="sem" name="Sem" placeholder="Enter your sem" required>
+            </div>
+            <div class="form-group">
+                <label for="book">Book Name</label>
+                <input type="text" id="book" name="Book_name" placeholder="Enter Book name" required>
+            </div>
+            <button type="submit" class="login-button">Sumbit</button>
+        </form>
+        
+    </div>
+</body>
+</html>

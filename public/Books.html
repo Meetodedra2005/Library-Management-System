@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Available Books</title>
+    <link rel="stylesheet" href="books.css">
+    <link rel="stylesheet" href="Home.css">
+</head>
+<body>
+    <form>
+        <header>
+            <div class="logo">CE DEPARMENT LIBRARY</div>
+            <nav>
+                <a href="#" onclick="window.location.href='Home.html'">Home</a>
+                <a href="#" onclick="window.location.href='Books.html'">Books Availability</a>
+                <a href="#" onclick="window.location.href='Request'">Request a Book</a>
+                <a href="#recommendations">Book Recommendations</a>
+                <a href="#" onclick="window.location.href='adminlogin.html'">Admin Login</a>
+            </nav>
+        </header>
+
+        <div class="search-bar">
+            <input type="text" placeholder="Search for books by title, author, or subject..."/>
+        </div>
+
+        <div class="container">
+            <h1>Available Books</h1>
+            <div id="avail-books"></div>
+        </div>
+        <footer>
+            <p>Contact us: library@example.com | +123 456 7890</p>
+        </footer>
+        </form>
+
+    <script>
+        async function LoadBookData() {
+            console.log('Data not found');
+            const Book = "dept_lib_new";
+            const filepath = `books/${Book}.json`;
+            try {
+                const response = await fetch(filepath);
+
+                if (!response.ok) {
+                    console.log('Data not found');
+                }
+
+                const book_data = await response.json();
+                console.log("Fetched data:", book_data);
+                let content = '';
+
+                book_data.forEach((element, index) => {
+                    content += `
+                        <div class="Book_box" onclick="toggleDescription(${index})">
+                            <img src="${element.Link}" alt="Book Image">
+                            <h2>${element.Name}</h2>
+                            <h3>Authors:</h3>
+                            <p>${element.Authors}</p>
+                            <h3>ISBN:</h3>
+                            <p>${element.ISBN}</p>
+                            <div class="description" id="desc-${index}">
+                                <h3>Description:</h3>
+                                <p>${element.Description}</p>
+                            </div>
+                        </div>
+                    `;
+                });
+                document.getElementById("avail-books").innerHTML = content;
+            } catch (error) {
+                document.getElementById("avail-books").innerText = "Book data not found.";
+            }
+        }
+
+        function toggleDescription(index) {
+            const desc = document.getElementById(`desc-${index}`);
+            if (desc.style.display === "none" || desc.style.display === "") {
+                desc.style.display = "block";
+            } else {
+                desc.style.display = "none";
+            }
+        }
+
+        LoadBookData();
+    </script>
+</body>
+</html>
