@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Login</title>
+    <link rel="stylesheet" href="/Home.css"> <!-- Ensure the correct path -->
+</head>
+<body>
+    <h1>Book Issue Records</h1>
+    <table border="1">
+        <thead>
+            <tr>
+                <th>Student Name</th>
+                <th>Student ID</th>
+                <th>Semester</th>
+                <th>Book Name</th>
+                <th>Issue Date</th>
+            </tr>
+        </thead>
+        <tbody>
+            <% records.forEach(record => { %>
+                <tr>
+                    <td><%= record.Student_name %></td>
+                    <td><%= record.Student_id %></td>
+                    <td><%= record.Sem %></td>
+                    <td><%= record.Book_name %></td>
+                    
+                    <!-- Handle Issue Date (format it correctly) -->
+                    <td><%= record.Issue_date ? new Date(record.Issue_date).toDateString() : "N/A" %></td>
+                </tr>
+            <% }) %>
+        </tbody>
+    </table>
+</body>
+</html>
