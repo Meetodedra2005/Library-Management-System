@@ -1,28 +1,13 @@
-// const express = require('express');
-// const path = require('path');
-// const Book_issue = require('../models/Book_issue'); // Ensure correct import
-// const router = express.Router();
-
-// router.get('/adminlogin', async (req, res) => {
-//     try {
-//         const data = await Book_issue.find(); // Fetch all book issue requests
-//         res.render("adminlogin", { records: data }); // Pass data to template
-//     } catch (err) {
-//         console.error("Error fetching data:", err);
-//         res.status(500).send("Error fetching data");
-//     }
-// });
-
-// module.exports = router;
-
 const express = require('express');
 const path = require('path');
-const Book_issue = require('../models/Book_issue'); // Ensure correct import
+const Request = require('../models/Request'); // ✅ Correct model name
+
 const router = express.Router();
 
+// Admin login page
 router.get('/adminlogin', async (req, res) => {
     try {
-        const data = await Book_issue.find(); // Fetch all book issue requests
+        const data = await Request.find(); // ✅ Now this will work
         res.sendFile(path.join(__dirname, '..', 'public', 'adminlogin.html'));
     } catch (err) {
         console.error("Error fetching data:", err);
@@ -30,9 +15,10 @@ router.get('/adminlogin', async (req, res) => {
     }
 });
 
+// Fetch requests (AJAX or frontend fetch call)
 router.get('/fetch-requests', async (req, res) => {
     try {
-        const data = await Book_issue.find(); // Fetch all book requests
+        const data = await Request.find(); // ✅ Works now
         res.json(data);
     } catch (err) {
         console.error("Error fetching book requests:", err);

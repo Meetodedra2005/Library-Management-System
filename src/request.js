@@ -1,27 +1,29 @@
 const express = require('express');
 const path = require('path');
-const Book_issue = require('../models/Book_issue'); // Update path as per your structure
+const Request = require('../models/Request'); // Correct model import
 const router = express.Router();
 
-// Route for the Request page
+// GET: Serve the Request page
 router.get('/Request', (req, res) => {
     res.sendFile(path.join(__dirname, '..', 'public', 'Request.html'));
 });
 
-// POST request to handle book request
+// POST: Handle book request form submission
 router.post('/Request', async (req, res) => {
     try {
-        const { Student_name, Student_id, Sem, Book_name } = req.body; // Use Sem with uppercase S if schema uses it
+        const { Student_name, Student_id, Sem, Book_name } = req.body;
 
-        const newUser = new Book_issue({
+        const newRequest = new Request({
             Student_name,
             Student_id,
             Sem,
-            Book_name,
+            Book_name
         });
 
-        await newUser.save();
+        await newRequest.save();
         console.log("Book issued successfully");
+
+        // Redirect to home page after success
         res.sendFile(path.join(__dirname, '..', 'public', 'Home.html'));
     } catch (error) {
         console.error("Error saving data:", error.message);
