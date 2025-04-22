@@ -1,85 +1,86 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Available Books</title>
-    <link rel="stylesheet" href="books.css">
-    <link rel="stylesheet" href="Home.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Available Books</title>
+  <link rel="stylesheet" href="books.css" />
+  <link rel="stylesheet" href="Home.css" />
 </head>
 <body>
-    <header>
-        <div class="logo">CE DEPARTMENT LIBRARY</div>
-        <nav>
-            <a href="Home.html">Home</a>
-            <a href="Books.html">Books Availability</a>
-            <a href="Request.html">Request a Book</a>
-            <a href="#recommendations">Book Recommendations</a>
-            <a href="adminlogin.html">Admin Login</a>
-        </nav>
-    </header>
+  <header>
+    <div class="logo">CE DEPARTMENT LIBRARY</div>
+    <nav>
+      <a href="Home.html">Home</a>
+      <a href="Books.html">Books Availability</a>
+      <a href="Request.html">Request a Book</a>
+      <a href="#recommendations">Book Recommendations</a>
+      <a href="adminlogin.html">Admin Login</a>
+    </nav>
+  </header>
 
-    <div class="search-bar">
-        <input type="text" placeholder="Search for books by title, author, or subject..." />
-    </div>
+  <div class="search-bar">
+    <input type="text" placeholder="Search for books by title, author, or subject..." />
+  </div>
 
-    <div class="container">
-        <h1>Available Books</h1>
-        <div id="avail-books"></div>
-    </div>
+  <div class="container">
+    <h1>Available Books</h1>
+    <div id="avail-books"></div>
+  </div>
 
-    <footer>
-        <p>Contact us: library@example.com | +123 456 7890</p>
-    </footer>
+  <footer>
+    <p>Contact us: library@example.com | +123 456 7890</p>
+  </footer>
 
-    <script>
-        async function LoadBookData() {
-            const filepath = `books/dept_lib_new.json`;
-            try {
-                const response = await fetch(filepath);
+  <script>
+    async function LoadBookData() {
+      const filepath = `books/dept_lib_new.json`;
 
-                if (!response.ok) {
-                    throw new Error('Data not found');
-                }
+      try {
+        const response = await fetch(filepath);
 
-                const book_data = await response.json();
-                let content = '';
-
-                book_data.forEach((element, index) => {
-                    content += `
-                        <div class="Book_box" onclick="toggleDescription(${index})">
-                            <img src="${element.Link}" alt="Book Image">
-                            <h2>${element.Name}</h2>
-                            <h3>Authors:</h3>
-                            <p>${element.Authors}</p>
-                            <h3>ISBN:</h3>
-                            <p>${element.ISBN}</p>
-                            <div class="description" id="desc-${index}" style="display:none;">
-                                <h3>Description:</h3>
-                                <p>${element.Description}</p>
-                            </div>
-                            <button onclick="requestBook('${encodeURIComponent(element.Name)}')">Request This Book</button>
-                        </div>
-                    `;
-                });
-
-                document.getElementById("avail-books").innerHTML = content;
-            } catch (error) {
-                console.error(error);
-                document.getElementById("avail-books").innerText = "Book data not found.";
-            }
+        if (!response.ok) {
+          throw new Error('Data not found');
         }
 
-        function toggleDescription(index) {
-            const desc = document.getElementById(`desc-${index}`);
-            desc.style.display = (desc.style.display === "none" || desc.style.display === "") ? "block" : "none";
-        }
+        const book_data = await response.json();
+        let content = '';
 
-        function requestBook(bookName) {
-            window.location.href = `Request.html?book=${bookName}`;
-        }
+        book_data.forEach((element, index) => {
+          content += `
+            <div class="Book_box" onclick="toggleDescription(${index})">
+              <img src="${element.Link}" alt="Book Image">
+              <h2>${element.Name}</h2>
+              <h3>Authors:</h3>
+              <p>${element.Authors}</p>
+              <h3>ISBN:</h3>
+              <p>${element.ISBN}</p>
+              <div class="description" id="desc-${index}" style="display:none;">
+                <h3>Description:</h3>
+                <p>${element.Description}</p>
+              </div>
+              <button onclick="event.stopPropagation(); requestBook('${encodeURIComponent(element.Name)}', ${element.Available})">Request This Book</button>
+            </div>
+          `;
+        });
 
-        LoadBookData();
-    </script>
+        document.getElementById("avail-books").innerHTML = content;
+      } catch (error) {
+        console.error(error);
+        document.getElementById("avail-books").innerText = "Book data not found.";
+      }
+    }
+
+    function toggleDescription(index) {
+      const desc = document.getElementById(`desc-${index}`);
+      desc.style.display = (desc.style.display === "none" || desc.style.display === "") ? "block" : "none";
+    }
+
+    function requestBook(bookName, available) {
+      window.location.href = `Request.html?book=${bookName}&available=${available}`;
+    }
+
+    LoadBookData();
+  </script>
 </body>
 </html>
