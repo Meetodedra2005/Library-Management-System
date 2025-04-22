@@ -89,20 +89,23 @@
                 return;
             }
 
-            // Sending credentials to the server for verification
-            const response = await fetch('/login', {
-                method: "POST",
-                headers: { "Content-Type": "application/json" },
-                body: JSON.stringify({ username, password })
-            });
+            try {
+                const response = await fetch('/login', {
+                    method: "POST",
+                    headers: { "Content-Type": "application/json" },
+                    body: JSON.stringify({ username, password })
+                });
 
-            const result = await response.json();
+                const result = await response.json();
 
-            if (result.success) {
-                localStorage.setItem("isAuthenticated", "true"); // Store login status
-                window.location.href = "adminlogin.html"; // Redirect to admin panel
-            } else {
-                alert("Invalid credentials! Please try again.");
+                if (result.success) {
+                    window.location.href = "/adminlogin"; // Server route (not a static file)
+                } else {
+                    alert("Invalid credentials! Please try again.");
+                }
+            } catch (error) {
+                console.error("Login error:", error);
+                alert("Server error. Please try again later.");
             }
         });
     </script>
