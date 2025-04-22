@@ -3,6 +3,31 @@ const mongoose = require('mongoose');
 const path = require('path');
 const nodemailer = require('nodemailer');
 const session = require('express-session');
+const cron = require('node-cron');
+
+const fs = require('fs');
+const jsonFilePath = path.join(__dirname, '..', 'public', 'books', 'dept_lib_new.json');
+
+async function markBookUnavailable(bookName) {
+    try {
+        const data = fs.readFileSync(jsonFilePath);
+        const books = JSON.parse(data);
+
+        const updatedBooks = books.map(book => {
+            if (book.Name === bookName) {
+                return { ...book, Available: "false" };
+            }
+            return book;
+        });
+
+        fs.writeFileSync(jsonFilePath, JSON.stringify(updatedBooks, null, 2));
+        console.log(`Updated availability for book: ${bookName}`);
+    } catch (err) {
+        console.error("Failed to update book availability:", err);
+    }
+}
+
+
 
 // Routes
 const homeRoutes = require('./home');
@@ -50,11 +75,72 @@ app.use(adminloginRoutes);
 app.post('/login', (req, res) => {
     const { username, password } = req.body;
     if (username === "admin" && password === "admin123") {
+        req.session.isAdmin = true;
         res.json({ success: true });
     } else {
         res.json({ success: false });
     }
 });
+
+app.get('/logout', (req, res) => {
+    // If you're using session
+    req.session.destroy(err => {
+        if (err) {
+            console.log("Error destroying session:", err);
+        }
+        res.redirect('/'); // Redirect to home page
+    });
+});
+
+
+// app.post('/login', (req, res) => {
+//     const { username, password } = req.body;
+//     if (username === "admin" && password === "admin123") {
+//         res.json({ success: true });
+//     } else {
+//         res.json({ success: false });
+//     }
+// });
+
+// Add this function alongside markBookUnavailable()
+async function markBookAvailable(bookName) {
+    try {
+        const data = fs.readFileSync(jsonFilePath);
+        const books = JSON.parse(data);
+
+        const updatedBooks = books.map(book => {
+            if (book.Name === bookName) {
+                return { ...book, Available: "true" };
+            }
+            return book;
+        });
+
+        fs.writeFileSync(jsonFilePath, JSON.stringify(updatedBooks, null, 2));
+        console.log(`Marked book available: ${bookName}`);
+    } catch (err) {
+        console.error("Failed to mark book available:", err);
+    }
+}
+
+// Return book route
+app.post('/return-book/:id', async (req, res) => {
+    try {
+        const book = await BookIssue.findById(req.params.id);
+        if (!book) return res.status(404).json({ success: false, message: "Book not found" });
+
+        // Mark as available in JSON
+        await markBookAvailable(book.Book_name);
+
+        // Remove from issued list
+        await BookIssue.findByIdAndDelete(req.params.id);
+
+        res.json({ success: true });
+    } catch (err) {
+        console.error("Error returning book:", err);
+        res.status(500).json({ success: false });
+    }
+});
+
 
 // Handle Accept/Reject Request
 app.post('/handle-request/:id/:action', async (req, res) => {
@@ -81,8 +167,12 @@ app.post('/handle-request/:id/:action', async (req, res) => {
 
             await issuedBook.save();
 
+            await markBookUnavailable(bookRequest.Book_name);
+
             subject = 'Book Request Accepted';
             message = `Hello ${bookRequest.Student_name},\n\nYour request for the book "${bookRequest.Book_name}" has been accepted.\nYou can collect it from the library today. Please return it within 10 days.\n\nRegards,\nLibrary Team`;
+
+            // bookRequest.Available = false;
 
         } else if (action === 'decline') {
             subject = 'Book Request Rejected';
@@ -109,6 +199,32 @@ app.post('/handle-request/:id/:action', async (req, res) => {
         res.status(500).json({ success: false, message: "Internal Server Error" });
     }
 });
+
+// Background task to check for overdue books every minute
+cron.schedule('* * * * *', async () => {
+    try {
+        const now = new Date();
+        const overdueBooks = await BookIssue.find({ Return_date: { $lt: now } });
+
+        for (const book of overdueBooks) {
+            const email = `${book.Student_id}@charusat.edu.in`;
+            const message = `Hello ${book.Student_name},\n\nThe return date for the book "${book.Book_name}" has passed.\nPlease return it to the library as soon as possible to avoid penalties.\n\nRegards,\nLibrary Team`;
+
+            const mailOptions = {
+                from: 'devennirmal109@gmail.com',
+                to: email,
+                subject: 'Book Return Reminder',
+                text: message
+            };
+
+            await transporter.sendMail(mailOptions);
+            console.log(`Reminder email sent to ${email}`);
+        }
+    } catch (error) {
+        console.error("Error sending return reminders:", error);
+    }
+});
+
 
 // MongoDB connection
 mongoose.connect('mongodb://127.0.0.1:27017/Library_management')
