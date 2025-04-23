@@ -116,20 +116,64 @@
 // module.exports = router;
 
 
+// const express = require('express');
+// const Request = require('../models/Request');
+// const BookIssue = require('../models/BookIssue');
+
+// const router = express.Router();
+
+// router.get('/adminlogin', async (req, res) => {
+//     try {
+//         const requests = await Request.find(); // All pending requests
+//         const records = await BookIssue.find(); // All issued books
+//         res.render('adminlogin', { requests, records });
+//     } catch (err) {
+//         console.error("Error fetching admin data:", err);
+//         res.status(500).send("Server Error");
+//     }
+// });
+
+// module.exports = router;
+
+
 const express = require('express');
 const Request = require('../models/Request');
 const BookIssue = require('../models/BookIssue');
+const path = require('path');
+const fs = require('fs');
 
 const router = express.Router();
 
+// Path to the JSON file
+const jsonFilePath = path.join(__dirname, '..', 'public', 'books', 'dept_lib_new.json');
+
 router.get('/adminlogin', async (req, res) => {
     try {
-        const requests = await Request.find(); // All pending requests
-        const records = await BookIssue.find(); // All issued books
-        res.render('adminlogin', { requests, records });
+        // Fetch pending requests and issued records from the database
+        const requests = await Request.find();
+        const records = await BookIssue.find();
+
+        // Load the JSON file with book availability
+        const fileContent = fs.readFileSync(jsonFilePath, 'utf-8');
+        const booksData = JSON.parse(fileContent);
+
+        // Enhance each request with the current availability status from the JSON
+        const updatedRequests = requests.map(request => {
+            const matchedBook = booksData.find(book =>
+                book.Name.trim().toLowerCase() === request.Book_name.trim().toLowerCase()
+            );
+
+            return {
+                ...request.toObject(), // Use toObject() for cleaner cloning
+                Available: matchedBook ? matchedBook.Available : "unknown"
+            };
+        });
+
+        // Render the admin login page with the updated data
+        res.render('adminlogin', { requests: updatedRequests, records });
     } catch (err) {
-        console.error("Error fetching admin data:", err);
-        res.status(500).send("Server Error");
+        console.error("Error loading admin panel:", err);
+        res.status(500).send("Internal Server Error");
     }
 });
 

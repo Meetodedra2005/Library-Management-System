@@ -1,103 +1,103 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Admin Panel</title>
-    <style>
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f4f4f4;
-            color: #333;
-        }
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Admin Panel</title>
+<style>
+    body {
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #f4f4f4;
+        color: #333;
+    }
 
-        h2 {
-            text-align: center;
-            margin: 30px 0 15px;
-            color: #444;
-        }
+    h2 {
+        text-align: center;
+        margin: 30px 0 15px;
+        color: #444;
+    }
 
-        table {
-            width: 90%;
-            margin: 0 auto 40px;
-            border-collapse: collapse;
-            background-color: #fff;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        }
+    table {
+        width: 90%;
+        margin: 0 auto 40px;
+        border-collapse: collapse;
+        background-color: #fff;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
 
-        th, td {
-            border: 1px solid #ddd;
-            padding: 12px 10px;
-            text-align: center;
-        }
+    th, td {
+        border: 1px solid #ddd;
+        padding: 12px 10px;
+        text-align: center;
+    }
 
-        th {
-            background-color: #007bff;
-            color: white;
-        }
+    th {
+        background-color: #007bff;
+        color: white;
+    }
 
-        tr:nth-child(even) {
-            background-color: #f9f9f9;
-        }
+    tr:nth-child(even) {
+        background-color: #f9f9f9;
+    }
 
-        .btn {
-            padding: 6px 12px;
-            margin: 0 3px;
-            font-size: 14px;
-            border: none;
-            border-radius: 4px;
-            cursor: pointer;
-            color: white;
-        }
+    .btn {
+        padding: 6px 12px;
+        margin: 0 3px;
+        font-size: 14px;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        color: white;
+    }
 
-        .btn:hover {
-            opacity: 0.9;
-        }
+    .btn:hover {
+        opacity: 0.9;
+    }
 
-        .btn:nth-child(1) {
-            background-color: #28a745; /* Accept */
-        }
+    .btn.accept {
+        background-color: #28a745;
+    }
 
-        .btn:nth-child(2) {
-            background-color: #dc3545; /* Decline */
-        }
+    .btn.decline {
+        background-color: #dc3545;
+    }
 
-        .logout {
-            display: block;
-            width: 150px;
-            margin: 20px auto 40px;
-            padding: 12px;
-            background-color: #ff4d4d;
-            color: white;
-            font-size: 16px;
-            text-align: center;
-            border: none;
-            border-radius: 8px;
-            cursor: pointer;
-            transition: 0.3s;
-        }
+    .logout {
+        display: block;
+        width: 150px;
+        margin: 20px auto 40px;
+        padding: 12px;
+        background-color: #ff4d4d;
+        color: white;
+        font-size: 16px;
+        text-align: center;
+        border: none;
+        border-radius: 8px;
+        cursor: pointer;
+        transition: 0.3s;
+    }
 
-        .logout:hover {
-            background-color: #e60000;
-        }
+    .logout:hover {
+        background-color: #e60000;
+    }
 
-        @media (max-width: 768px) {
-            table {
-                font-size: 14px;
-            }
+    @media (max-width: 768px) {
+    table {
+        font-size: 14px;
+    }
 
-            .btn {
-                padding: 4px 8px;
-                font-size: 12px;
-            }
+    .btn {
+        padding: 4px 8px;
+        font-size: 12px;
+    }
 
-            .logout {
-                width: 120px;
-                font-size: 14px;
-            }
-        }
+    .logout {
+        width: 120px;
+        font-size: 14px;
+    }
+    }
     </style>
 </head>
 <body>
@@ -105,104 +105,103 @@
     <h2>Book Requests</h2>
 
     <table>
-        <thead>
-            <tr>
-                <th>Student Name</th>
-                <th>Student ID</th>
-                <th>Semester</th>
-                <th>Book Name</th>
-                <th>Availability</th>
-                <th>Actions</th>
-            </tr>
-        </thead>
-        <tbody>
-            <% requests.forEach(requests => { %>
-                <tr>
-                    <td><%= requests.Student_name %></td>
-                    <td><%= requests.Student_id %></td>
-                    <td><%= requests.Sem %></td>
-                    <td><%= requests.Book_name %></td>
-                    <td><%= requests.Available  %></td> <!-- Default fallback if undefined -->
-                    <td>
-                        <button class="btn" onclick="handleRequest('<%= requests._id %>', 'accept')">Accept</button>
-                        <button class="btn" onclick="handleRequest('<%= requests._id %>', 'decline')">Decline</button>
-                    </td>
-                </tr>
-            <% }) %>
-        </tbody>
-    </table>
-    
-
-    <h2>Issued Books</h2>
-<table border="1">
     <thead>
         <tr>
             <th>Student Name</th>
             <th>Student ID</th>
             <th>Semester</th>
             <th>Book Name</th>
-            <th>Issue Date</th>
-            <th>Return Date</th>
-            <th>Action</th>
+            <th>Availability</th>
+            <th>Actions</th>
         </tr>
     </thead>
     <tbody>
-        <% records.forEach(record => { %>
-            <tr>
-                <td><%= record.Student_name %></td>
-                <td><%= record.Student_id %></td>
-                <td><%= record.Sem %></td>
-                <td><%= record.Book_name %></td>
-                <td><%= record.Issue_date.toDateString() %></td>
-                <td><%= record.Return_date.toDateString() %></td>
-                <td>
-                    <button onclick="returnBook('<%= record._id %>')">Return</button>
-                </td>
-            </tr>
+        <% requests.forEach(request => { %>
+        <tr>
+            <td><%= request.Student_name %></td>
+            <td><%= request.Student_id %></td>
+            <td><%= request.Sem %></td>
+            <td><%= request.Book_name %></td>
+            <td><%= request.Available %></td>
+            <td>
+            <button class="btn accept" onclick="handleRequest('<%= request._id %>', 'accept')">Accept</button>
+            <button class="btn decline" onclick="handleRequest('<%= request._id %>', 'decline')">Decline</button>
+        </td>
+        </tr>
         <% }) %>
+    </tbody>
+    </table>
+
+<h2>Issued Books</h2>
+
+<table>
+    <thead>
+    <tr>
+        <th>Student Name</th>
+        <th>Student ID</th>
+        <th>Semester</th>
+        <th>Book Name</th>
+        <th>Issue Date</th>
+        <th>Return Date</th>
+        <th>Action</th>
+    </tr>
+    </thead>
+    <tbody>
+    <% records.forEach(record => { %>
+        <tr>
+        <td><%= record.Student_name %></td>
+        <td><%= record.Student_id %></td>
+        <td><%= record.Sem %></td>
+        <td><%= record.Book_name %></td>
+        <td><%= record.Issue_date.toDateString() %></td>
+        <td><%= record.Return_date.toDateString() %></td>
+        <td>
+            <button onclick="returnBook('<%= record._id %>')">Return</button>
+        </td>
+        </tr>
+    <% }) %>
     </tbody>
 </table>
 
 <script>
     function returnBook(id) {
-        if (confirm("Are you sure you want to return this book?")) {
-            fetch(`/return-book/${id}`, {
-                method: "POST"
-            })
-            .then(res => res.json())
-            .then(data => {
-                if (data.success) {
-                    alert("Book returned successfully.");
-                    location.reload();
-                } else {
-                    alert("Failed to return book.");
-                }
-            })
-            .catch(err => {
-                console.error("Error returning book:", err);
-                alert("Error while returning book.");
-            });
+    if (confirm("Are you sure you want to return this book?")) {
+        fetch(`/return-book/${id}`, {
+            method: "POST"
+        })
+        .then(res => res.json())
+        .then(data => {
+        if (data.success) {
+            alert("Book returned successfully.");
+            location.reload();
+        } else {
+            alert("Failed to return book.");
         }
+        })
+        .catch(err => {
+        console.error("Error returning book:", err);
+            alert("Error while returning book.");
+        });
+    }
+    }
+
+    function handleRequest(id, action) {
+        fetch(`/handle-request/${id}/${action}`, {
+        method: 'POST'
+        })
+        .then(res => res.json())
+        .then(data => {
+        alert(data.message);
+        location.reload();
+        })
+        .catch(err => {
+        console.error("Error:", err);
+        alert("Something went wrong");
+        });
     }
 </script>
 
     <button class="logout" onclick="location.href='/logout'">Logout</button>
 
-    <script>
-        function handleRequest(id, action) {
-            fetch(`/handle-request/${id}/${action}`, {
-                method: 'POST'
-            })
-            .then(res => res.json())
-            .then(data => {
-                alert(data.message);
-                location.reload();
-            })
-            .catch(err => {
-                console.error("Error:", err);
-                alert("Something went wrong");
-            });
-        }
-    </script>
 </body>
 </html>
