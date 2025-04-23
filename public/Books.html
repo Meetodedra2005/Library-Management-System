@@ -59,7 +59,7 @@
                 <h3>Description:</h3>
                 <p>${element.Description}</p>
               </div>
-              <button onclick="event.stopPropagation(); requestBook('${encodeURIComponent(element.Name)}', ${element.Available})">Request This Book</button>
+              <button class = "Request_button" onclick="event.stopPropagation(); requestBook('${encodeURIComponent(element.Name)}', ${element.Available})">Request This Book</button>
             </div>
           `;
         });

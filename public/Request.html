@@ -5,17 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Request</title>
     <link rel="stylesheet" href="Request.css">
-</head>
-<body>
-    <button onclick="goBack()" style="margin: 15px; padding: 10px 15px; border: none; background-color: #007bff; color: white; border-radius: 5px; cursor: pointer;">
-        ← Back
-    </button>
-    
     <script>
         function goBack() {
             window.history.back();
         }
     </script>
+</head>
+<body>
+    <button class="Back" onclick="goBack()">← Back</button>
+
     <div class="login-container">
         <h1>ISSUE YOUR BOOK</h1>
         <form action="/Request" method="POST">
