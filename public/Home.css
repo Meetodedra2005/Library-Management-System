@@ -73,6 +73,57 @@ nav a:hover {
     border-radius: 5px;
 }
 
+@keyframes fadeSlideIn {
+    0% {
+        opacity: 0;
+        transform: translateX(-30px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.hero {
+    position: relative;
+    width: 100%;
+    /* height: 100vh; */
+    overflow: hidden;
+}
+
+.hero img {
+    width: 100%;
+    height: 650px;
+    object-fit: cover;
+    border-radius: 10px;
+    display: block;
+}
+
+.hero-text-top-left {
+    position: absolute;
+    top: 70px;
+    left: 120px;
+    background-color: rgba(0, 0, 0, 0.7);
+    color: white;
+    padding: 20px 30px;
+    border-radius: 12px;
+    max-width: 600px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+    animation: fadeSlideIn 1.5s ease-out forwards;
+    opacity: 0; /* Start hidden */
+}
+
+.hero-title {
+    font-size: 2rem;
+    font-weight: 800;
+    margin-bottom: 10px;
+}
+
+.hero-subtitle {
+    font-size: 1.2rem;
+    font-weight: 400;
+}
+
 footer {
     background-color: #2c3e50;
     color: white;

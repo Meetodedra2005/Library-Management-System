@@ -1,3 +1,6 @@
 node_modules/
 package-lock.json
 package.json
+animation.html
+carousel.css
+carousel.js
