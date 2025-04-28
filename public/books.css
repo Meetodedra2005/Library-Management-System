@@ -5,6 +5,45 @@ body {
     background-color: #f4f4f4;
 }
 
+.search-bar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 30px;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+#searchFilter, 
+#searchInput {
+    padding: 10px 15px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    outline: none;
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+#searchFilter:hover, 
+#searchInput:hover {
+    border-color: #007bff;
+}
+
+#searchFilter:focus, 
+#searchInput:focus {
+    border-color: #0056b3;
+    box-shadow: 0 0 7px rgba(0, 123, 255, 0.5);
+}
+
+#searchInput {
+    width: 1000px;
+}
+
+#searchFilter {
+    background-color: #fff;
+    cursor: pointer;
+}
+
 #avail-books {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));

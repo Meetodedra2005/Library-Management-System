@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Available Books</title>
-  <link rel="stylesheet" href="books.css" />
+  <link rel="stylesheet" href="Books.css" />
   <link rel="stylesheet" href="Home.css" />
 </head>
 <body>
@@ -20,7 +20,12 @@
   </header>
 
   <div class="search-bar">
-    <input type="text" placeholder="Search for books by title, author, or subject..." />
+    <select id="searchFilter">
+      <option value="title">Search by Title</option>
+      <option value="author">Search by Author</option>
+    </select>
+
+    <input type="text" id="searchInput" placeholder="Enter search keyword..." />
   </div>
 
   <div class="container">
@@ -28,13 +33,11 @@
     <div id="avail-books"></div>
   </div>
 
-  <!-- <footer>
-    <p>Contact us: library@example.com | +123 456 7890</p>
-  </footer> -->
-
   <script>
+    let allBooks = [];
+
     async function LoadBookData() {
-      const filepath = `books/dept_lib_new.json`;
+      const filepath = 'books/dept_lib_new.json';
 
       try {
         const response = await fetch(filepath);
@@ -43,42 +46,82 @@
           throw new Error('Data not found');
         }
 
-        const book_data = await response.json();
-        let content = '';
-
-        book_data.forEach((element, index) => {
-          content += `
-            <div class="Book_box" onclick="toggleDescription(${index})">
-              <img src="${element.Link}" alt="Book Image">
-              <h2>${element.Name}</h2>
-              <h3>Authors:</h3>
-              <p>${element.Authors}</p>
-              <h3>ISBN:</h3>
-              <p>${element.ISBN}</p>
-              <div class="description" id="desc-${index}" style="display:none;">
-                <h3>Description:</h3>
-                <p>${element.Description}</p>
-              </div>
-              <button class = "Request_button" onclick="event.stopPropagation(); requestBook('${encodeURIComponent(element.Name)}', ${element.Available})">Request This Book</button>
-            </div>
-          `;
-        });
-
-        document.getElementById("avail-books").innerHTML = content;
+        allBooks = await response.json();
+        displayBooks(allBooks);
       } catch (error) {
         console.error(error);
         document.getElementById("avail-books").innerText = "Book data not found.";
       }
     }
 
+    function displayBooks(books) {
+      let content = '';
+
+      books.forEach((element, index) => {
+        content += `
+          <div class="Book_box" onclick="toggleDescription(${index})">
+            <img src="${element.Link}" alt="Book Image">
+            <h2>${element.Name}</h2>
+            <h3>Authors:</h3>
+            <p>${element.Authors}</p>
+            <h3>ISBN:</h3>
+            <p>${element.ISBN}</p>
+            <div class="description" id="desc-${index}" style="display:none;">
+              <h3>Description:</h3>
+              <p>${element.Description}</p>
+            </div>
+            <button class="Request_button" onclick="event.stopPropagation(); requestBook('${encodeURIComponent(element.Name)}', ${element.Available})">
+              Request This Book
+            </button>
+          </div>
+        `;
+      });
+
+      document.getElementById("avail-books").innerHTML = content;
+    }
+
+    function searchBooks() {
+      const query = document.getElementById("searchInput").value.toLowerCase();
+      const filterType = document.getElementById("searchFilter").value;
+
+      if (query.trim() === "") {
+        displayBooks(allBooks);  // If empty, show all books
+        return;
+      }
+
+      let filteredBooks = [];
+
+      if (filterType === "title") {
+        filteredBooks = allBooks.filter(book => 
+          book.Name.toLowerCase().includes(query)
+        );
+      } else if (filterType === "author") {
+        filteredBooks = allBooks.filter(book => 
+          book.Authors.toLowerCase().includes(query)
+        );
+      }
+
+      if (filteredBooks.length > 0) {
+        displayBooks(filteredBooks);
+      } else {
+        document.getElementById("avail-books").innerHTML = "<p>No matching books found.</p>";
+      }
+    }
+
     function toggleDescription(index) {
-      const desc = document.getElementById(`desc-${index}`);
+      const desc = document.getElementById(`desc-${index}`);  // Corrected
       desc.style.display = (desc.style.display === "none" || desc.style.display === "") ? "block" : "none";
     }
 
-    function requestBook(bookName, available) {
-      window.location.href = `Request.html?book=${bookName}&available=${available}`;
-    }
+  function requestBook(bookName, available) {
+    window.location.href = `Request.html?book=${bookName}&available=${available}`;  // Corrected
+  }
+
+    // LIVE SEARCH: Automatically search when typing
+    document.addEventListener('DOMContentLoaded', () => {
+      document.getElementById("searchInput").addEventListener("input", searchBooks);
+      document.getElementById("searchFilter").addEventListener("change", searchBooks); // Also re-search if user changes filter type
+    });
 
     LoadBookData();
   </script>
