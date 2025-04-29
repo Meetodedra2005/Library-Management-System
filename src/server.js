@@ -143,17 +143,6 @@ app.post('/handle-request/:id/:action', async (req, res) => {
         let message = '';
 
         if (action === 'accept') {
-            const issuedBook = new BookIssue({
-                Student_name: bookRequest.Student_name,
-                Student_id: bookRequest.Student_id,
-                Sem: bookRequest.Sem,
-                Book_name: bookRequest.Book_name,
-                Issue_date: new Date()
-            });
-
-            await issuedBook.save();
-            await markBookUnavailable(bookRequest.Book_name);
-
             subject = 'Book Request Accepted';
             message = `Hello ${bookRequest.Student_name},\n\nYour request for the book "${bookRequest.Book_name}" has been accepted.\nYou can collect it from the library today. Please return it within 10 days.\n\nRegards,\nLibrary Team`;
         } else if (action === 'decline') {
@@ -170,10 +159,27 @@ app.post('/handle-request/:id/:action', async (req, res) => {
             text: message
         };
 
+        // FIRST: Try sending the mail
         await transporter.sendMail(mailOptions);
         console.log(`Confirmation email sent to ${email}`);
 
+        // THEN: Only after successful email sending, process action
+        if (action === 'accept') {
+            const issuedBook = new BookIssue({
+                Student_name: bookRequest.Student_name,
+                Student_id: bookRequest.Student_id,
+                Sem: bookRequest.Sem,
+                Book_name: bookRequest.Book_name,
+                Issue_date: new Date()
+            });
+
+            await issuedBook.save();
+            await markBookUnavailable(bookRequest.Book_name);
+        }
+
+        // Remove the request after email and database operation
         await Request.findByIdAndDelete(id);
+
         res.json({ success: true, message: `Request ${action}ed and email sent.` });
     } catch (error) {
         console.error("Error processing request:", error);
